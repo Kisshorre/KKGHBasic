@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint src --fix",
     "test": "vitest run",
-    "deploy": "gh-pages -d dist -r https://x-access-token:${GITHUB_TOKEN}@github.com/Kisshorre/https://github.com/Kisshorre/KKGHBasic.git"
+    "deploy": "gh-pages -d dist -r https://x-access-token:${GITHUB_TOKEN}@github.com/Kisshorre/KKGHBasic.git"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
