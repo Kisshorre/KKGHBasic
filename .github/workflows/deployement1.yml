@@ -21,4 +21,6 @@ jobs:
 
       - name: Deploy
         if: github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}  
         run: npm run deploy
