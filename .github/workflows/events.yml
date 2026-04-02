@@ -15,7 +15,7 @@ on:
       - 'feat/**'
 jobs:
   deploy:
-    runs-on: ubuntu-latesh
+    runs-on: ubuntu-latest
     steps:
       - name: Output events data
         run: echo "${{ toJson(github.event)}}"
