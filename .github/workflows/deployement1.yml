@@ -14,6 +14,11 @@ jobs:
         run: npm run test
       - name: Build code
         run: npm run build
+      - name: Configure Git for gh-pages
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         run: npm run deploy
