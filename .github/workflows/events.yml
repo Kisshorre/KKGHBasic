@@ -1,0 +1,32 @@
+name: Events Demo
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**' 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**'
+jobs:
+  deploy:
+    runs-on: ubuntu-latesh
+    steps:
+      - name: Output events data
+        run: echo "${{ toJson(github.event)}}"
+      - name: Get code
+        run: actions/checkout@v6
+      - name: Install dependencies 
+        run: npm ci
+      - name: Test code
+        run: npm run test
+      - name: Build code
+        run: npm run build
+      - name: Deploy
+        run: echo "Deploying..."                           
+

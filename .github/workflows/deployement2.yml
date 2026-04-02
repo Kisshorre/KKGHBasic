@@ -1,5 +1,5 @@
 name: Deployment Exercise 2
-on: [push,workflow_dispatch]
+on: workflow_dispatch
 jobs:
   Lint:
     runs-on: ubuntu-latest
